@@ -18,20 +18,29 @@ header {
     height: 600px;
     overflow: hidden;
     img {
-        // mobile first default [START] - - - - - - -
+
+    // mobile first default [START] - - - - - - -
 
         // set the position of the img tag to fixed. This means the image will
         // stay in position when the user scrolls, thus creating a feeling of
         // depth (object at far horizon does not move when viewer moves).
         // The idea is that the content scrolls up over the image in the header
+
         position: fixed;   // fixed to view port, don't move when scroll
         width: 1200px;
         top: 0px;
         left: 50%;  // image's left edge start at center disregard of viewport size
         margin-left: -600px; // readjust to compensate left offset specified above
 
-        // mobile first default [END] - - - - - - - -
+    // mobile first default [END] - - - - - - - -
+
         @media screen and (min-width: $screen-lg) {
+
+            // on large window sizes make the image fill the browser
+            // width and position it back in the top left corner.
+            // Importantly, we must reset the margin so the image is not
+            // pulled off to the left.
+
             top: auto;
             left: auto;
             margin: 0;
@@ -39,6 +48,35 @@ header {
         }
     }
 }
+
+
+.name {
+    font-size: 21px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    color: $white;
+}
+
+.titles {
+    position: absolute;
+    bottom: 40%;
+    width: 100%;
+    text-align: center;
+
+    @media screen and (min-width: $screen-lg) {
+
+        //  titles element to push it up a little bit more on large screens
+        bottom: 50%;
+    }
+}
+
+h1, h2 {
+    width: 100%;
+    color: $white;
+    margin: 0;
+}
+
 
 /* **********************************************************************
    _custom_after.scss  [END]
