@@ -90,6 +90,7 @@ h1 {
 
         // On mobile we need it to be a block level element so it
         // stacks as in its own line by itself.
+        // This is a better way to do line break
 
         @media screen and (min-width: $screen-md) {
             display: inline;
@@ -108,6 +109,10 @@ h2 {
     }
 }
 
+
+.fancy-font {
+    font-family: $fancy-font;
+}
 
 /* **********************************************************************
    _custom_after.scss  [END]
