@@ -68,6 +68,7 @@ header {
 
         //  titles element to push it up a little bit more on large screens
         bottom: 50%;
+
     }
 }
 
@@ -75,6 +76,36 @@ h1, h2 {
     width: 100%;
     color: $white;
     margin: 0;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.06em;
+    margin-bottom: $margin;
+
+    span {
+        display: block;
+
+        // On mobile we need it to be a block level element so it
+        // stacks as in its own line by itself.
+
+        @media screen and (min-width: $screen-md) {
+            display: inline;
+        }
+    }
+}
+
+h2 {
+    font-size: 16px;
+    width: 70%;
+    margin: 0 auto;
+
+    @media screen and (min-width: $screen-lg) {
+        width: 100%;
+        margin: 0;
+    }
 }
 
 
