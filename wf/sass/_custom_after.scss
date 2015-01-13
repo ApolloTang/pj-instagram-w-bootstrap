@@ -1,0 +1,40 @@
+/* **********************************************************************
+   _custom_after.scss  [BEGIN]
+*********************************************************************** */
+
+* {
+    position: relative;     // set everything as position: relative so there are no surprises when using absolutely positioned elements.
+    box-sizing: border-box; // border-box so that we can use percentage widths and not worry about any padding the element has influencing the layout.
+
+}
+body {
+    color: $grey;
+    font-size: $font-size;
+}
+
+
+header {
+    max-height: 600px;
+    height: 600px;
+    overflow: hidden;
+    img {
+        position: fixed;
+        top: 0px;
+        left: 50%;
+        margin-left: -600px;
+        width: 1200px;
+
+        @media screen and (min-width: $screen-lg) {
+            top: auto;
+            left: auto;
+            margin: 0;
+            width: 100%;
+        }
+    }
+}
+
+/* **********************************************************************
+   _custom_after.scss  [END]
+*********************************************************************** */
+
+
