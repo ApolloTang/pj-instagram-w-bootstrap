@@ -114,6 +114,48 @@ h2 {
     font-family: $fancy-font;
 }
 
+
+.social {
+    position: absolute;
+    top: 55px;
+    right: 50px;
+    overflow: hidden;
+
+    a {
+        float: left;
+        width: 26px;
+        height: 26px;
+        margin: 0 5px;
+        text-indent: -9999px;
+        background: url(../images/social-sprite.png) no-repeat;
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1.0;
+        }
+
+        @media screen and (-webkit-min-device-pixel-ratio: 2), screen and (-min-device-pixel-ratio: 2) {
+            // For including high-res graphics, but only for
+            // screens that can make use of them. "Retina" being "2x":
+            // ref:: http://css-tricks.com/snippets/css/retina-display-media-query/
+            background: url(../images/social-sprite@2x.png) no-repeat;
+            background-size: 76px 26px;
+            // no need to specify background-position !
+        }
+
+        &.facebook {
+            background-position: 0px 0px;
+        }
+
+        &.twitter {
+            background-position: -25px 0px;
+        }
+
+        &.instagram {
+            background-position: -50px 0px;
+        }
+    }
+}
 /* **********************************************************************
    _custom_after.scss  [END]
 *********************************************************************** */
